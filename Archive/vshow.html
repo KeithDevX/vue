@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <div id = "app">
+        <!-- <p v-if="userAge>allowedAge">
+            You are good to go
+
+        </p>
+       <p v-else-if="user === 'Francis'">
+            You are Francis, so fine
+       </p>
+        <p v-else>
+            you are not allowed
+
+        </p> -->
+        <!-- <p v-if="checkUser()">
+                show it
+        </p>
+        <p v-else="checkUser()">
+            not allowed
+        </p> -->
+
+        <p v-show="user === 'Francis'">
+            show it
+        </p>
+
+        <p v-show="user !== 'Francis'">
+            not Francis
+        </p>
+
+
+    
+    </div>
+
+</body>
+<script>
+
+    new Vue({
+        el:"#app",
+        data:{
+            user:"Francis",
+            userAge:15,
+            allowedAge:18
+        },
+        methods:{
+            checkUser(){
+                return this.user === "Francis" ? true : false
+            }
+        }
+
+    })
+
+</script>
+
+</html>  

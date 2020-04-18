@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <div id = "app">
+
+        <div>
+            <button v-on:click="alertSomething">Alert Something</button>
+            <hr>
+            <button @click="alertSomething">Alert Something</button>
+            <hr>
+            <a v-bind:href="google">Hello</a>
+            <hr>
+            <a :href="google">Hello</a>
+            <hr>
+            <input type="text" v-model="user"/>
+        </div>
+    </div>
+
+</body>
+<script>
+
+    new Vue({
+        el:"#app",
+        data:{
+            user:'',
+            google: 'http://google.com'
+        },
+        methods:{
+            alertSomething(){
+                alert('hey')
+            }
+        }
+
+    })
+
+</script>
+
+</html> 

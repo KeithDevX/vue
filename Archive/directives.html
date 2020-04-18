@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <div id = "app">
+        <img v-bind:src="src" v-bind:alt="alt"/>
+        <hr>
+        <a v-bind:href="link" >Go to google</a>
+        <hr>
+        <p v-text="mytext" ></p>
+        <hr>
+        <div v-html="myhtml" ></div>
+    </div>
+
+</body>
+<script>
+
+    new Vue({
+        el:"#app",
+        data:{
+            src:"https://picsum.photos/id/237/200/300",
+            alt:"https://picsum.photos/seed/picsum/200/300",
+            link:"http:google.com",
+            mytext:'Hello Guys Again',
+            myhtml: "<strong> Francis Jones </strong>"
+        }
+    })
+
+</script>
+
+</html>  

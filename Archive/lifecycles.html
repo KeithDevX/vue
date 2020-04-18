@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <div id = "app">
+        <div> {{name}} </div>
+        <div @click="updateName">Update Name</div>
+        <div @click="killIt">Destroy</div>
+    </div>
+
+</body>
+<script>
+
+    const app1 = new Vue({
+        el:"#app",
+        data:{
+            name: 'Francis'
+        },
+        methods:{
+            updateName(){
+                this.name = 'Steve'
+            },
+            killIt(){
+                this.$destroy();
+            }
+        },
+        beforeCreate() {
+            console.log('running before created')
+        },
+        created() {
+            console.log('Running created')
+        },
+        beforeMount() {
+            console.log('running before mount')
+        },
+        mounted() {
+            console.log('running mounted')
+        },
+        beforeUpdate() {
+            console.log('running before update')
+        },
+        updated() {
+            console.log('running updated')
+        },
+        beforeDestroy() {
+            console.log('running before destroy')
+        },
+        destroyed() {
+            console.log('running destroyed')
+        },
+    })
+
+</script>
+
+</html> 
